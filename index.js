@@ -12,7 +12,7 @@ const bodyparser =require('body-parser')
 
 const app = express()
 
-const port = 4000;
+const port =process.env.port || 4000;
 
 dotEnv.config()
 
@@ -37,6 +37,6 @@ app.listen(port, () => {
     console.log(`the server is running at ${port}`)
 })
 
-app.use('/home',(req,res)=>{
-    res.send("<h1>hello welcome to the tamoto</h1>")
+app.use('/',(req,res)=>{
+    res.send("<h1>hello welcome to the Yammyway</h1>")
 })
