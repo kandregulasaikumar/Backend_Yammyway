@@ -1,7 +1,7 @@
 const express = require('express')
 const dotEnv =require('dotenv')
 const mongoose =require('mongoose')
-
+const cors =require('cors')
 const vendorRoutes =require('./routes/vendorRoutes')
 const firmRoutes =require('./routes/firmRoutes')
 const productRoutes =require('./routes/productRoutes')
@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(bodyparser.json())
 
+app.use(cors())
 
 app.use('/vendor',vendorRoutes);
 
