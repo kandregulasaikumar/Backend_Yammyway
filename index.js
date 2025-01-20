@@ -39,5 +39,5 @@ app.listen(port, () => {
 })
 
 app.use('/',(req,res)=>{
-    res.send("<h1>hello welcome to the Yammyway</h1>")
+    res.send("<h1>hello welcome to the Yammyway 2</h1>")
 })
